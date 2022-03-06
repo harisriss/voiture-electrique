@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+}
+
+.blaze {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+}
+
+.loris-blaze {
+  font-weight: 700;
+}
+
+.loris-box {
+  vertical-align: center;
+}
+
+.loris {
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media screen and (max-width: 960px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    vertical-align: center;
+    padding: 5px 0 5px 0;
+
+  }
+  .loris-box {
+    display: none;
+  }
+
+  .blaze {
+    margin: 4px;
+  }
+}
+
+
