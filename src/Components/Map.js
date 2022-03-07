@@ -13,7 +13,7 @@ export default class Map extends Component {
   map;
 
   /**
-   * initialise mon component au moment du chargement de la page
+   * initialise le component au moment du chargement de la page
    */
   componentDidMount() {
     this.map = new mapboxgl.Map({
@@ -44,12 +44,9 @@ export default class Map extends Component {
   }
 
   /**
-   * mets à jour mon component lorsque les coordonnées change
-   * @param prevProps coordonnées precédantes
-   * @param prevState coordonnées courante
+   * mets à jour le component lorsque les coordonnées changent
    */
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log('longueur', this.props.bornes.length);
     if (prevProps.bornes !== this.props.bornes) {
       for (let i in this.props.bornes) {
         let borne = this.props.bornes[i];
@@ -58,11 +55,6 @@ export default class Map extends Component {
 
         new mapboxgl.Marker(el).setLngLat(borne.geometry.coordinates).addTo(this.map);
       }
-    }
-    if (this.props.bornes.length < 1) {
-      let a = document.getElementsByClassName('no-marker').innerHTML;
-      console.log('a', a);
-
     }
 
     if (prevProps.bornes.lat !== this.props.lat || prevProps.bornes.lon !== this.props.lon) {

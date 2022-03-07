@@ -9,7 +9,7 @@ const CarList = () => {
 
 
   /**
-   * permet de mettre a jour  l'affichage en fonction des données récuperées par les appels API
+   * permet de mettre a jour etat et donc l'affichage en fonction des données récuperées par les appels API
    */
   const [cars, setCars] = useState([]);
   const [bornes, setBornes] = useState([]);
@@ -44,11 +44,7 @@ const CarList = () => {
     fetch(`https://opendata.reseaux-energies.fr/api/records/1.0/search/?dataset=bornes-irve&q=&sort=-dist&facet=region&geofilter.distance=${latitudeBorne}%2C${longitudeBorne}%2C+8000`)
       .then(res => res.json())
       .then((data) => {
-        console.log(latitudeBorne);
-        console.log(longitudeBorne);
         setBornes(data.records);
-        console.log(data.records);
-
       });
   };
 
@@ -56,14 +52,14 @@ const CarList = () => {
    *  recupère les données du service REST et les formate en JSON
    */
   const fetchDataREST = () => {
-    fetch('http://localhost:3079')
+    fetch('https://client-js-rest.herokuapp.com/')
       .then(res => {
         return res.json();
       })
       .then((data) => {
         setTravelDataDuartion(data.duration);
         setTravelDataDistance(data.distance);
-        alert('Mon API REST renvoie la distance et le temps entre 2 coordonnées fixes (celles de Chambéry et celles de Lyon rentrées en dure dans mon service REST');
+        alert('Mon API REST renvoie la distance et le temps entre 2 coordonnées fixes (celles de Chambéry et celles de Lyon en l\'occurence) rentrées en dure dans mon service REST');
       });
 
   };
