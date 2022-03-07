@@ -27,3 +27,9 @@ Développer une application en ligne qui permet de planifier un voyage en véhic
   GPS passées en paramètre.
 - Interroger un service REST de cartographie pour afficher le trajet du véhicule
 
+## Ce qui a été développer
+
+- Service et Client SOAP
+- Service et Client REST
+- Seule la partie react doit être lancer en local avec la commande ``yarn start`` ou ``npm start`` lancé depuis la
+  racine du projet
