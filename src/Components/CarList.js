@@ -160,8 +160,6 @@ const CarList = () => {
           </Text>
         </Box> :
         <Text> </Text>}
-
-
     </Box>
   );
 };
