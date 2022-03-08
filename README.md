@@ -1,5 +1,4 @@
 # TP INFO 802
-
 ## But du TP
 
 Développer une application en ligne qui permet de planifier un voyage en véhicule électrique.
@@ -16,20 +15,22 @@ Développer une application en ligne qui permet de planifier un voyage en véhic
   GPS passées en paramètre.
 - Interroger un service REST de cartographie pour afficher le trajet du véhicule
 
-## Ce qui a été développer
+## Ce qui a été développé
 
 - [Service SOAP](https://github.com/harisriss/SOAPServer)
 - [Client JS pour le service SOAP](https://github.com/harisriss/ClientJS)
-- [Service REST](https://github.com/harisriss/TravelTimeRESTAPI)
-- [Client JS pour le service REST](https://github.com/harisriss/ClientRestJS) (fonctionne partiellement : renvoie le
-  temps et la distance entre 2 coordonnées ecritent en dure dans le code)
+- [Service REST](https://github.com/harisriss/TravelTimeRESTAPI) ( fonctionne partiellement : renvoie le temps et la
+  distance entre 2 coordonnées ecritent en dure dans le code )
+- [Client JS pour le service REST](https://github.com/harisriss/ClientRestJS)
 - Interroger un service REST qui fournit un emplacement de prise de rechargement disponible à proximité de coordonnées
   GPS passées en paramètre.
 - Interroger un service REST de cartographie pour afficher le trajet du véhicule
 
-## Ce qui a été développer
+## Ce qui a été déployé
 
 - Service et Client SOAP
 - Service et Client REST
-- Seule la partie react doit être lancer en local avec la commande ``yarn start`` ou ``npm start`` lancé depuis la
-  racine du projet
+- Site finale : http://www.turbowatibornes.com/
+
+---
+Haris COLICHE
